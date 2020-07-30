@@ -9,7 +9,9 @@ module.exports = {
         new CopyWebpackPlugin([
             {from: 'app/images', to: 'images'}
         ]),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash].css',
+        }),
         new HtmlWebpackPlugin({
             template: 'app/index.html',
             inject: 'head'
@@ -41,7 +43,7 @@ module.exports = {
     entry: ['./app/src/init.js', './app/css/base.css'],
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js'
+        filename: '[name].[hash].js'
     },
     mode: 'development',
     devServer: {

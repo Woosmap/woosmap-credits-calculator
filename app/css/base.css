@@ -172,3 +172,17 @@ a:hover {
 #annual-credits .card{
   padding-bottom: 20px;
 }
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+}
+footer a{
+  color: #777777;
+  border-color: #777777;
+}
+
+footer a:hover {
+  color: #1976d2;
+}
