@@ -5,9 +5,9 @@ import {html, render} from 'lit-html';
     let state;
     // List of input items for the Map Display section
     const plansLabels = {
-        community: "You are on the <strong>Community</strong> plan",
-        standard: "You are on the <strong>Standard</strong> plan",
-        enterprise: "You are on the <strong>Enterprise</strong> plan",
+        community: "You remain to the free <strong>Community</strong> plan",
+        standard: "You'll need a <strong>Standard</strong> plan",
+        enterprise: "You'll need an <strong>Enterprise</strong> plan",
     };
     const mapServices = {
         title: "<p>Enter the <strong>daily</strong> number of map views (when your Store Locator is loaded)</p>",
