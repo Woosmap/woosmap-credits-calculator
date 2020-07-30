@@ -20,4 +20,4 @@ jobs:
       - run: npm run build
       - name: Deploy to S3
         run: |
-          aws s3 cp ./dist/ s3://demo.woosmap.com/credits-calculator/ --recursive
+          aws s3 sync ./dist/ s3://demo.woosmap.com/credits-calculator/ --delete
