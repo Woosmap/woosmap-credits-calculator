@@ -25,19 +25,19 @@ import {html, render} from 'lit-html';
             title: 'Woosmap Search API',
             parameter: 'ws_search',
             quantity: 0,
-            credits: 0.25
+            credits: 0.1
         },
         geolocation: {
             title: 'Woosmap Geolocation API',
             parameter: 'ws_geolocation',
             quantity: 0,
-            credits: 0.25
+            credits: 0.4
         },
         distance: {
             title: 'Woosmap Distance API',
             parameter: 'ws_distance',
             quantity: 0,
-            credits: 0.25
+            credits: 0.5
         }
     };
     // List of input items for the localities section
