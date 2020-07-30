@@ -1,188 +1,201 @@
 body, html {
-  margin: 0;
-  background: #F7F8FA;
-  position: relative;
-  font-size: 16px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    background: #F7F8FA;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #1976d2;
-  cursor: pointer;
-  text-decoration: none;
-  border-bottom: 1px solid #1976d2;
-  word-break: break-word;
+    color: #1976d2;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid #1976d2;
+    word-break: break-word;
 }
 
 a:hover {
-  border-bottom-color: #1976d2;
-  border-bottom-width: 2px;
+    border-bottom-color: #1976d2;
+    border-bottom-width: 2px;
 }
 
 #logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#logo a {
+    align-items: center;
+    display: flex;
+    border: none
+}
+
+#logo a:hover {
+    color: #33475c;
 }
 
 #logo span {
-  color: #33475c;
-  font-size: 18px;
-  margin-top: 8px;
-  padding-left: 5px;
+    color: #33475c;
+    font-size: 18px;
+    margin-top: 8px;
+    padding-left: 5px;
 }
 
 #mainHeader {
-  border-radius: 0;
-  position: fixed;
-  height: 64px;
-  width: 100%;
-  z-index: 1000;
-  background-color: #fff;
-  padding: 0 20px;
-  padding-bottom: 5px;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14), 0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084);
+    border-radius: 0;
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 0 20px;
+    padding-bottom: 5px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14), 0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084);
 }
 
 #main {
-  display: grid;
-  grid-template-columns: 100%;
-  padding: 80px 5px;
-  margin: 0 auto;
-  max-width: 1120px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 80px 5px;
+    margin: 0 auto;
+    max-width: 1120px;
 }
 
 @media only screen and (min-width: 1000px) {
-  #main {
-    grid-template-columns: minmax(auto, 710px) minmax(auto, 410px);
-    grid-template-rows: 0;
-  }
+    #main {
+        grid-template-columns: minmax(auto, 710px) minmax(auto, 410px);
+        grid-template-rows: 0;
+    }
 
-  #products {
-    grid-column: 1;
-    padding: 10px;
-  }
+    #products {
+        grid-column: 1;
+        padding: 10px;
+    }
 
-  #annual-credits {
-    grid-column: 2;
-    top: 80px;
-    position: sticky;
-  }
+    #annual-credits {
+        grid-column: 2;
+        top: 80px;
+        position: sticky;
+    }
 }
 
 #products {
-  padding: 0
+    padding: 0
 }
 
 #annual-credits {
-  text-align: center;
-  align-self: flex-start;
-  padding: 0
+    text-align: center;
+    align-self: flex-start;
+    padding: 0
 }
 
 .card {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  border-radius: 4px 4px 2px 2px;
-  text-rendering: optimizeLegibility;
-  margin: 15px 10px;
-  color: #1D1D1D;
-  transition: all 0.3s;
-  background: #fff;
-  box-shadow: 0 3px 6px 0 rgba(70, 82, 97, 0.15), 0 2px 4px 0 rgba(117, 119, 148, 0.2);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 4px 4px 2px 2px;
+    text-rendering: optimizeLegibility;
+    margin: 15px 10px;
+    color: #1D1D1D;
+    transition: all 0.3s;
+    background: #fff;
+    box-shadow: 0 3px 6px 0 rgba(70, 82, 97, 0.15), 0 2px 4px 0 rgba(117, 119, 148, 0.2);
 }
 
 .card-content {
-  padding: 15px;
+    padding: 15px;
 }
-.card-content p{
-  opacity: .7;
-  font-size: .95rem;
+
+.card-content p {
+    opacity: .7;
+    font-size: .95rem;
 }
 
 .header {
-  border-radius: 4px 4px 0 0;
-  flex-direction: row;
-  padding: 0 15px;
-  margin: 0;
-  color: #FFF;
-  background: #1D1D1D;
+    border-radius: 4px 4px 0 0;
+    flex-direction: row;
+    padding: 0 15px;
+    margin: 0;
+    color: #FFF;
+    background: #1D1D1D;
 }
 
 .localities-services.header {
-  background: #eb5937;
+    background: #eb5937;
 }
 
 .web-services.header {
-  background: #ff9f19;
+    background: #ff9f19;
 }
 
 .map-display.header {
-  background: #153f59;
+    background: #153f59;
 }
 
 .data-services.header {
-  background: #1976d2;
+    background: #1976d2;
 }
 
 .header h2 {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: .005em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .005em;
 }
 
 .row {
-  height: 50px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 46% 24% 30%;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 46% 24% 30%;
 }
 
 .numeric-field input {
-  text-align: center;
-  font-size: 1.1rem;
-  border-width: 0 0 1px;
-  width: 95%;
-  height: 29px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-width: 0 0 1px;
+    width: 95%;
+    height: 29px;
 }
 
 .credits-computed {
-  padding: 10px;
+    padding: 10px;
 }
 
 .credits-computed h2 {
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: .005em;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: .005em;
 }
 
 #credits-total {
-  font-size: 45px;
-  font-weight: 400;
-  line-height: 64px;
-  padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 64px;
+    padding-bottom: 20px;
 }
 
-#annual-credits #plan-info, #annual-credits a{
-  margin: 0 auto;
-}
-#annual-credits .card{
-  padding-bottom: 20px;
+#annual-credits #plan-info, #annual-credits a {
+    margin: 0 auto;
 }
 
-footer{
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px 0;
+#annual-credits .card {
+    padding-bottom: 20px;
 }
-footer a{
-  color: #777777;
-  border-color: #777777;
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #777777;
+    border-color: #777777;
 }
 
 footer a:hover {
-  color: #1976d2;
+    color: #1976d2;
 }
