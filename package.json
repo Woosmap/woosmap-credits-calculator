@@ -1,15 +1,15 @@
 {
-  "name": "woosmap-starterkit-storelocator",
+  "name": "woosmap-credits-calculator",
   "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woosmap/woosmap-starterkit-storelocator"
+    "url": "https://github.com/woosmap/woosmap-credits-calculator"
   },
   "bugs": {
-    "url": "https://github.com/woosmap/woosmap-starterkit-storelocator/issues"
+    "url": "https://github.com/woosmap/woosmap-credits-calculator/issues"
   },
-  "homepage": "https://github.com/woosmap/woosmap-starterkit-storelocator",
+  "homepage": "https://github.com/woosmap/woosmap-credits-calculator",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack"
