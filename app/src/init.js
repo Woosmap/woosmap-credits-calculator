@@ -3,6 +3,12 @@ import {html, render} from 'lit-html';
 (function () {
     let creditsComputed = 0;
     let state;
+
+    let localitiesServicesCard;
+    let webServicesCard;
+    let dataServicesCard;
+    let mapDisplayCard;
+
     // List of input items for the Map Display section
     const plansLabels = {
         community: "You remain to the free <strong>Community</strong> plan",
@@ -134,15 +140,21 @@ import {html, render} from 'lit-html';
 
     };
 
+    const setCardsElement = () => {
+        mapDisplayCard = document.querySelector('#map-display .card-content');
+        webServicesCard = document.querySelector('#web-services .card-content');
+        localitiesServicesCard = document.querySelector('#localities .card-content');
+        dataServicesCard = document.querySelector('#data-management .card-content');
+    };
+
     const renderFields = () => {
-        const mapDisplayCard = document.querySelector('#map-display .card-content');
-        const webServicesCard = document.querySelector('#web-services .card-content');
-        const localitiesServicesCard = document.querySelector('#localities .card-content');
-        const dataServicesCard = document.querySelector('#data-management .card-content');
         render(fieldTemplate(mapServices.mapLoads), mapDisplayCard);
         render([fieldTemplate(webServices.search), fieldTemplate(webServices.distance), fieldTemplate(webServices.geolocation)], webServicesCard);
         render(fieldTemplate(localitiesServices.localities), localitiesServicesCard);
         render(fieldTemplate(dataServices.data), dataServicesCard);
+    };
+
+    const renderTitles = () => {
         mapDisplayCard.insertAdjacentHTML("afterbegin", mapServices.title);
         webServicesCard.insertAdjacentHTML("afterbegin", webServices.title);
         localitiesServicesCard.insertAdjacentHTML("afterbegin", localitiesServices.title);
@@ -151,12 +163,17 @@ import {html, render} from 'lit-html';
 
     const init = () => {
         getUrlParams();
+        setCardsElement();
         renderFields();
+        renderTitles();
         setCreditsValue();
     };
 
     window.onpopstate = () => {
-        init();
+        getUrlParams();
+        setCardsElement();
+        renderFields();
+        setCreditsValue();
     };
 
     document.addEventListener("DOMContentLoaded", function () {
